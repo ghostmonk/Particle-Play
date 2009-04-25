@@ -2,9 +2,14 @@ package com.ghostmonk.ui {
 	
 	import caurina.transitions.Tweener;
 	
-	import flash.display.Bitmap;
+	import com.ghostmonk.events.ExtendedToggleEvent;
+	import com.ghostmonk.events.ToggleEvent;
+	
 	import flash.events.Event;
 	import flash.events.MouseEvent;
+	
+	[ Event ( name="toggle", type="com.ghostmonk.events.ToggleEvent" ) ]
+	[ Event ( name="toggleParticles", type="com.ghostmonk.events.ExtendedToggleEvent" ) ]
 	
 	/**
 	 * A collection of user interface controls to change the output of a particle system
@@ -19,6 +24,7 @@ package com.ghostmonk.ui {
 		private var _glowPanel:GlowFilterControls;
 		private var _particlePanel:ParticleControls;
 		private var _perlinPanel:PerlinControls;
+		private var _isOpen:Boolean;
 			
 		
 		/**
@@ -30,19 +36,24 @@ package com.ghostmonk.ui {
 		public function SystemControlPanel( ctPanel:ColorTransformControls, glowPanel:GlowFilterControls, particlePanel:ParticleControls, perlinPanel:PerlinControls ) {
 			
 			panelToggle.stop(); 
+			panelToggle.buttonMode = true;
+			panelToggle.addEventListener( MouseEvent.CLICK, onClick );
 			
+			_particlePanel = particlePanel;
+			_particlePanel.y = panelToggle.height + 5;
+			_particlePanel.addEventListener( ToggleEvent.TOGGLE, togglePerlinView );
+			_particlePanel.addEventListener( ExtendedToggleEvent.TOGGLE_PARTICLES, toggleParticles );
+			
+			_perlinPanel = perlinPanel;
 			_ctPanel = ctPanel;
 			_glowPanel = glowPanel;
-			_particlePanel = particlePanel;
-			_perlinPanel = perlinPanel;
 			
-			addChild( _perlinPanel );
-			_perlinPanel.y = panelToggle.height + 5;
 			
 			addEventListener( Event.ADDED_TO_STAGE, onAddedToStage );
-			addEventListener( MouseEvent.ROLL_OVER, onRollOver );
-			addEventListener( MouseEvent.ROLL_OUT, onRollOut );
 			
+			_isOpen = false;
+			
+			addChild( _particlePanel );
 		}
 		
 		
@@ -56,17 +67,32 @@ package com.ghostmonk.ui {
 		
 		
 		
-		private function onRollOut( e:MouseEvent ):void {
+		private function onClick( e:MouseEvent ):void {
 			
-			Tweener.addTween( this, { y:stage.stageHeight - panelToggle.height, time:0.3 } );
+			_isOpen = !_isOpen;
+			
+			if( _isOpen ) {
+				Tweener.addTween( this, { y:stage.stageHeight - this.height, time:0.3 } );
+				panelToggle.gotoAndStop( 2 );
+			}
+			else {
+				Tweener.addTween( this, { y:stage.stageHeight - panelToggle.height, time:0.3 } );
+				panelToggle.gotoAndStop( 1 );	
+			}
 			
 		}
 		
 		
-		
-		private function onRollOver( e:MouseEvent ):void {
+		private function togglePerlinView( e:ToggleEvent ):void {
 			
-			Tweener.addTween( this, { y:stage.stageHeight - this.height, time:0.3 } );
+			dispatchEvent( e );
+			
+		}
+		
+		
+		private function toggleParticles( e:ExtendedToggleEvent ):void {
+			
+			dispatchEvent( e );
 			
 		}
 		

@@ -51,7 +51,7 @@ package com.ghostmonk.organic
 				_points.push( new Point(0,0) );
 			}
 			
-			displayData();
+			toggleDisplay( true );
 			
 		}
 		
@@ -66,21 +66,19 @@ package com.ghostmonk.organic
 		
 		
 		
-		public function displayData():void {
+		public function toggleDisplay( visible:Boolean ):void {
 			
-			addChild( _bitmap );
+			if( visible ) {
+				addChild( _bitmap );
+			}
+			else {
+				removeChild( _bitmap );
+			}
+			
 			renderData();
 			
 		}
 		
-		
-		
-		public function hideData():void {
-			
-			removeChild( _bitmap );
-			renderData();
-			
-		}
 		
 		
 		

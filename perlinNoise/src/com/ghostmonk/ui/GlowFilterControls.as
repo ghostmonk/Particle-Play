@@ -1,5 +1,6 @@
 package com.ghostmonk.ui {
 	
+	import com.ghostmonk.display.ParticleOutput;
 	import com.ghostmonk.events.MeasureEvent;
 	import com.ghostmonk.events.ToggleEvent;
 	import com.ghostmonk.startupdata.GlowFilterData;
@@ -7,15 +8,13 @@ package com.ghostmonk.ui {
 	import com.ghostmonk.ui.composed.Switch;
 	import com.ghostmonk.ui.composed.TwoDimensionalGridControl;
 	
-	import flash.display.Bitmap;
-	
 	public class GlowFilterControls extends GlowFilterPanel {
 		
 		private var _glowReveal:Switch;
 		private var _glowAlpha:SimpleSlider;
 		private var _glowBlur:TwoDimensionalGridControl;
 		
-		private var _particleOutput:Bitmap;
+		private var _particleOutput:ParticleOutput;
 		
 		
 		/**
@@ -23,7 +22,7 @@ package com.ghostmonk.ui {
 		 * @param glowData
 		 * 
 		 */
-		public function GlowFilterControls( startupData:GlowFilterData, uiFactory:UIFactory, particleOutput:Bitmap ) {
+		public function GlowFilterControls( startupData:GlowFilterData, uiFactory:UIFactory, particleOutput:ParticleOutput ) {
 			
 			_particleOutput = particleOutput;
 			

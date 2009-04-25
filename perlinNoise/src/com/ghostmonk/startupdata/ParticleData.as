@@ -5,6 +5,7 @@ package com.ghostmonk.startupdata
 		
 		private var _showPerlin:Boolean;
 		private var _showParticles:Boolean;
+		private var _particleColor:uint;
 		private var _particleAmount:Object;
 		private var _perlinResolution:Object;
 		private var _perlinOffset:Object;
@@ -27,6 +28,13 @@ package com.ghostmonk.startupdata
 			
 		}
 		
+		
+		
+		public function get particleColor():uint {
+			
+			return _particleColor;
+			
+		}
 		
 		
 		public function get particleAmount():Object {
@@ -72,6 +80,7 @@ package com.ghostmonk.startupdata
 			
 			_showParticles = true;
 			_showPerlin = false;
+			_particleColor = 0xFFFFFFFF;
 			_particleAmount = { min:1000, max:15000, start:7000 };
 			_perlinResolution = { min:5, max:800, start:300 };
 			_perlinOffset = { min:1, max:20, start:1 };
