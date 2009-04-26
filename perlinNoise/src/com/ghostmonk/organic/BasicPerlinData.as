@@ -33,6 +33,13 @@ package com.ghostmonk.organic
 			return _bitmapData;
 		}
 		
+		public function setBitmapSize( width:Number, height:Number, scale:Number ):void {
+			
+			_bitmapData = new BitmapData( width, height, false, 0xff000000 );
+			_bitmap.scaleX = _bitmap.scaleY = scale;
+			
+		}
+		
 		
 		
 		public function BasicPerlinData( perlinValues:PerlinValues, width:Number, height:Number, scale:Number, speed:int ) {		

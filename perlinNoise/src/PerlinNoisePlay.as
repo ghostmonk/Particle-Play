@@ -2,6 +2,7 @@ package {
 	
 	import com.ghostmonk.display.ParticleOutput;
 	import com.ghostmonk.events.ExtendedToggleEvent;
+	import com.ghostmonk.events.MeasureEvent;
 	import com.ghostmonk.events.ToggleEvent;
 	import com.ghostmonk.organic.BasicPerlinData;
 	import com.ghostmonk.organic.PerlinValues;
@@ -23,7 +24,7 @@ package {
 	import flash.geom.ColorTransform;
 	import flash.geom.Rectangle;
 	
-	[ SWF ( width=600, height=600, frameRate=100, backgroundColor=0x000000 ) ]
+	[ SWF ( width=470, height=470, frameRate=31, backgroundColor=0x000000 ) ]
 	
 	public class PerlinNoisePlay extends Sprite {
 		

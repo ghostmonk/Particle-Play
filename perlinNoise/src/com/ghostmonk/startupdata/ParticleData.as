@@ -81,11 +81,11 @@ package com.ghostmonk.startupdata
 			_showParticles = true;
 			_showPerlin = false;
 			_particleColor = 0xFFFFFFFF;
-			_particleAmount = { min:1000, max:15000, start:7000 };
-			_perlinResolution = { min:5, max:800, start:300 };
+			_particleAmount = { min:1000, max:50000, start:8000 };
+			_perlinResolution = { min:5, max:800, start:100 };
 			_perlinOffset = { min:1, max:20, start:1 };
 			_particleSpeed = { min:1, max:20 };
-			_controlsAlpha = { min:0, max:1, start:0.7 };
+			_controlsAlpha = { min:0.5, max:1, start:0.7 };
 			
 		}
 

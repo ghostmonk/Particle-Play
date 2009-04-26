@@ -69,6 +69,7 @@ package com.ghostmonk.ui {
 			dispatchEvent( new ToggleEvent( ToggleEvent.TOGGLE, _startupData.showPerlin ) );
 			dispatchEvent( new ExtendedToggleEvent( ExtendedToggleEvent.TOGGLE_PARTICLES, _startupData.showParticles ) );
 			
+			//parent.alpha = _startupData.controlsAlpha.start;
 			_startupData = null;
 			
 		}
@@ -83,17 +84,9 @@ package com.ghostmonk.ui {
 		
 		
 		
-		private function onPerlinResolution( e:MeasureEvent ):void {
-			
-			
-			
-		}
-		
-		
-		
 		private function onAlphaControls( e:MeasureEvent ):void {
 			
-			
+			parent.alpha = e.value;
 			
 		}
 		
