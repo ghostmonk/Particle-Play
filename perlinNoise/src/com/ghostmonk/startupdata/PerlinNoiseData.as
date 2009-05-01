@@ -1,7 +1,12 @@
-package com.ghostmonk.startupdata
-{
-	public class PerlinNoiseData
-	{
+package com.ghostmonk.startupdata {
+	
+	
+	/**
+	 * 
+	 * @author ghostmonk
+	 * 
+	 */
+	public class PerlinNoiseData {
 		
 		
 		private var _perlinBase:Object;
@@ -15,6 +20,11 @@ package com.ghostmonk.startupdata
 		
 		
 		
+		/**
+		 * 
+		 * @return 
+		 * 
+		 */
 		public function get perlinBase():Object {
 			
 			return _perlinBase;
@@ -23,6 +33,11 @@ package com.ghostmonk.startupdata
 		
 		
 		
+		/**
+		 * 
+		 * @return 
+		 * 
+		 */
 		public function get perlinRandomSeed():Object {
 			
 			return _perlinRandomSeed;
@@ -31,6 +46,11 @@ package com.ghostmonk.startupdata
 		
 		
 		
+		/**
+		 * 
+		 * @return 
+		 * 
+		 */
 		public function get perlinChannel():Object {
 			
 			return _perlinChannel;
@@ -39,6 +59,11 @@ package com.ghostmonk.startupdata
 		
 		
 		
+		/**
+		 * 
+		 * @return 
+		 * 
+		 */
 		public function get stitch():Boolean {
 			
 			return _perlinStitch;
@@ -47,6 +72,11 @@ package com.ghostmonk.startupdata
 		
 		
 		
+		/**
+		 * 
+		 * @return 
+		 * 
+		 */
 		public function get fractalNoise():Boolean {
 			
 			return _perlinFractalNoise;
@@ -55,6 +85,11 @@ package com.ghostmonk.startupdata
 		
 		
 		
+		/**
+		 * 
+		 * @return 
+		 * 
+		 */
 		public function get greyScale():Boolean {
 			
 			return _perlinGreyScale;
@@ -62,6 +97,11 @@ package com.ghostmonk.startupdata
 		}
 		
 		
+		/**
+		 * 
+		 * @return 
+		 * 
+		 */
 		public function get speed():Object {
 			
 			return _speed;
@@ -70,6 +110,10 @@ package com.ghostmonk.startupdata
 		
 		
 		
+		/**
+		 * 
+		 * 
+		 */
 		public function PerlinNoiseData() {
 			
 			_perlinBase = { xstart:0.5, ystart:0.5 };

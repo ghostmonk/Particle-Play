@@ -1,7 +1,12 @@
-package com.ghostmonk.startupdata
-{
-	public class ParticleData
-	{
+package com.ghostmonk.startupdata {
+	
+	
+	/**
+	 * 
+	 * @author ghostmonk
+	 * 
+	 */
+	public class ParticleData {
 		
 		private var _showPerlin:Boolean;
 		private var _showParticles:Boolean;
@@ -14,6 +19,11 @@ package com.ghostmonk.startupdata
 		
 		
 		
+		/**
+		 * 
+		 * @return 
+		 * 
+		 */
 		public function get showParticles():Boolean {
 			
 			return _showParticles;
@@ -22,6 +32,11 @@ package com.ghostmonk.startupdata
 		
 		
 		
+		/**
+		 * 
+		 * @return 
+		 * 
+		 */
 		public function get showPerlin():Boolean {
 			
 			return _showPerlin;
@@ -30,6 +45,11 @@ package com.ghostmonk.startupdata
 		
 		
 		
+		/**
+		 * 
+		 * @return 
+		 * 
+		 */
 		public function get particleColor():uint {
 			
 			return _particleColor;
@@ -37,6 +57,11 @@ package com.ghostmonk.startupdata
 		}
 		
 		
+		/**
+		 * 
+		 * @return 
+		 * 
+		 */
 		public function get particleAmount():Object {
 			
 			return _particleAmount;
@@ -45,6 +70,11 @@ package com.ghostmonk.startupdata
 		
 		
 		
+		/**
+		 * 
+		 * @return 
+		 * 
+		 */
 		public function get perlinResolution():Object {
 			
 			return _perlinResolution;
@@ -53,6 +83,11 @@ package com.ghostmonk.startupdata
 		
 		
 		
+		/**
+		 * 
+		 * @return 
+		 * 
+		 */
 		public function get perlinOffset():Object {
 			
 			return _perlinOffset;
@@ -60,6 +95,11 @@ package com.ghostmonk.startupdata
 		}
 		
 		
+		/**
+		 * 
+		 * @return 
+		 * 
+		 */
 		public function get particleSpeed():Object {
 			
 			return _particleSpeed;
@@ -68,6 +108,11 @@ package com.ghostmonk.startupdata
 		
 		
 		
+		/**
+		 * 
+		 * @return 
+		 * 
+		 */
 		public function get controlsAlpha():Object {
 			
 			return _controlsAlpha;
@@ -76,6 +121,10 @@ package com.ghostmonk.startupdata
 		
 			
 			
+		/**
+		 * 
+		 * 
+		 */
 		public function ParticleData() {
 			
 			_showParticles = true;

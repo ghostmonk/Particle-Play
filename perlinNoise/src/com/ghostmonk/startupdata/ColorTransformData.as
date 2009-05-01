@@ -1,13 +1,22 @@
-package com.ghostmonk.startupdata
-{
-	public class ColorTransformData
-	{
+package com.ghostmonk.startupdata {
+	
+	/**
+	 * 
+	 * @author ghostmonk
+	 * 
+	 */
+	public class ColorTransformData {
 		
 		private var _ctMultiplier:Object;
 		private var _ctOffset:Object;
 		
 		
 		
+		/**
+		 * 
+		 * @return 
+		 * 
+		 */
 		public function get multiplier():Object {
 			
 			return _ctMultiplier;
@@ -16,6 +25,11 @@ package com.ghostmonk.startupdata
 		
 		
 		
+		/**
+		 * 
+		 * @return 
+		 * 
+		 */
 		public function get offset():Object {
 			
 			return _ctOffset;
@@ -25,6 +39,10 @@ package com.ghostmonk.startupdata
 		
 		
 		
+		/**
+		 * 
+		 * 
+		 */
 		public function ColorTransformData()
 		{
 			

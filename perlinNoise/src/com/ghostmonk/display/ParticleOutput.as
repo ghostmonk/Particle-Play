@@ -21,6 +21,11 @@ package com.ghostmonk.display {
 		
 		
 		
+		/**
+		 * 
+		 * @param value
+		 * 
+		 */
 		public function set visibleParticles( value:int ):void {
 			
 			_visibleParticles = value;
@@ -28,6 +33,13 @@ package com.ghostmonk.display {
 		}
 
 		
+		/**
+		 * 
+		 * @param bitmapData
+		 * @param pixelSnapping
+		 * @param smoothing
+		 * 
+		 */
 		public function ParticleOutput( bitmapData:BitmapData=null, pixelSnapping:String="auto", smoothing:Boolean=false ) {
 			
 			super( bitmapData, pixelSnapping, smoothing );
@@ -39,6 +51,14 @@ package com.ghostmonk.display {
 		
 		
 		
+		/**
+		 * 
+		 * @param amount
+		 * @param minSpeed
+		 * @param maxSpeed
+		 * @param color
+		 * 
+		 */
 		public function createParticles( amount:int, minSpeed:Number, maxSpeed:Number, color:uint ):void {
 			
 			_particleColor = color;
@@ -57,6 +77,12 @@ package com.ghostmonk.display {
 		}
 		
 		
+		/**
+		 * 
+		 * @param perlinData
+		 * @param dataScale
+		 * 
+		 */
 		public function perlinParticleMovement( perlinData:BasicPerlinData, dataScale:Number ):void {
 			
 			

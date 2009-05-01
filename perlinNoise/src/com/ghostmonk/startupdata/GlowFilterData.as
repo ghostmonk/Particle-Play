@@ -1,7 +1,12 @@
-package com.ghostmonk.startupdata
-{
-	public class GlowFilterData
-	{
+package com.ghostmonk.startupdata {
+	
+	/**
+	 * 
+	 * @author ghostmonk
+	 * 
+	 */
+	public class GlowFilterData {
+		
 		
 		private var _startColor:uint;
 		private var _glowReveal:Boolean;
@@ -12,6 +17,11 @@ package com.ghostmonk.startupdata
 		
 		
 		
+		/**
+		 * 
+		 * @return 
+		 * 
+		 */
 		public function get color():uint {
 			
 			return _startColor;
@@ -20,6 +30,11 @@ package com.ghostmonk.startupdata
 		
 		
 		
+		/**
+		 * 
+		 * @return 
+		 * 
+		 */
 		public function get glowToggle():Boolean {
 			
 			return _glowReveal;
@@ -28,6 +43,11 @@ package com.ghostmonk.startupdata
 		
 		
 		
+		/**
+		 * 
+		 * @return 
+		 * 
+		 */
 		public function get alpha():Object {
 			
 			return _glowAlpha;
@@ -36,6 +56,11 @@ package com.ghostmonk.startupdata
 		
 		
 		
+		/**
+		 * 
+		 * @return 
+		 * 
+		 */
 		public function get glowStrength():Object {
 			
 			return _glowStrength;
@@ -44,6 +69,11 @@ package com.ghostmonk.startupdata
 		
 		
 		
+		/**
+		 * 
+		 * @return 
+		 * 
+		 */
 		public function get glowQuality():Object {
 			
 			return _glowQuality;
@@ -52,6 +82,11 @@ package com.ghostmonk.startupdata
 		
 		
 		
+		/**
+		 * 
+		 * @return 
+		 * 
+		 */
 		public function get glowBlur():Object {
 			
 			return _glowBlur;
@@ -60,6 +95,10 @@ package com.ghostmonk.startupdata
 		
 		
 		
+		/**
+		 * 
+		 * 
+		 */
 		public function GlowFilterData() {
 			
 			_startColor = 0x00FF00;

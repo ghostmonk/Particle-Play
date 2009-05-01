@@ -117,11 +117,11 @@ package com.ghostmonk.ui {
 		
 		
 		
-		private function createContolButton( button:Sprite, label:String ):void {
+		private function createContolButton( button:PanelTabAsset, label:String ):void {
 			
 			button.buttonMode = true;
 			button.mouseChildren = false;
-			TextField( button.getChildByName( "label" ) ).text = label;
+			button.label.text = label;
 			button.addEventListener( MouseEvent.CLICK, onSectionClick );
 			
 		}

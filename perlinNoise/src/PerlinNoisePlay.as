@@ -26,6 +26,25 @@ package {
 	
 	[ SWF ( width=470, height=470, frameRate=31, backgroundColor=0x000000 ) ]
 	
+	/**
+	 * 
+	 * big todos: 
+	 * * 
+	 * * save user settings
+	 * * create emmiter element
+	 * * create physics repulsion element
+	 * * create physics attraction element
+	 * * change glow color
+	 * * change partlicle color
+	 * * change background color
+	 * * write particle output to buffer that is not effected by system settings
+	 * * label controls
+	 * * create UML diagram
+	 * * add support for alternate bitmap data
+	 * *
+	 * @author ghostmonk
+	 * 
+	 */
 	public class PerlinNoisePlay extends Sprite {
 		
 		private const PARTICLE_COLOR:uint = 0xFFFFFFFF;
@@ -42,6 +61,10 @@ package {
 		private var _renderParticles:Boolean;
 		
 		
+		/**
+		 * 
+		 * 
+		 */
 		public function PerlinNoisePlay() {
 			
 			stage.scaleMode = StageScaleMode.NO_SCALE;

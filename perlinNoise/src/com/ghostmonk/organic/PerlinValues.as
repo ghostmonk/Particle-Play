@@ -20,6 +20,11 @@ package com.ghostmonk.organic {
 		
 		
 		
+		/**
+		 * 
+		 * @param value
+		 * 
+		 */
 		public function set baseX( value:Number ):void {	
 			_baseX = value;			
 		}
@@ -30,6 +35,11 @@ package com.ghostmonk.organic {
 		
 		
 		
+		/**
+		 * 
+		 * @param value
+		 * 
+		 */
 		public function set baseY( value:Number ):void {	
 			_baseY = value;			
 		}
@@ -40,6 +50,11 @@ package com.ghostmonk.organic {
 		
 		
 		
+		/**
+		 * 
+		 * @param value
+		 * 
+		 */
 		public function set octaves( value:uint ):void {
 			_octaves = value;
 		}
@@ -50,6 +65,11 @@ package com.ghostmonk.organic {
 		
 		
 		
+		/**
+		 * 
+		 * @param value
+		 * 
+		 */
 		public function set randomSeed( value:int ):void {	
 			_randomSeed = value;
 		}
@@ -60,6 +80,11 @@ package com.ghostmonk.organic {
 		
 		
 		
+		/**
+		 * 
+		 * @param value
+		 * 
+		 */
 		public function set stitch( value:Boolean ):void	{	
 			_stitch = value;		
 		}
@@ -70,6 +95,11 @@ package com.ghostmonk.organic {
 		
 		
 		
+		/**
+		 * 
+		 * @param value
+		 * 
+		 */
 		public function set fractalNoise( value:Boolean ):void {	
 			_fractalNoise = value;	
 		}
@@ -81,6 +111,11 @@ package com.ghostmonk.organic {
 		
 		
 		
+		/**
+		 * 
+		 * @param value
+		 * 
+		 */
 		public function set channelOptions( value:uint ):void {
 			_channelOptions = value;
 		}
@@ -91,6 +126,11 @@ package com.ghostmonk.organic {
 		
 		
 		
+		/**
+		 * 
+		 * @param value
+		 * 
+		 */
 		public function set greyScale( value:Boolean ):void {	
 			_greyScale = value;		
 		}
@@ -101,6 +141,18 @@ package com.ghostmonk.organic {
 		
 		
 		
+		/**
+		 * 
+		 * @param baseX
+		 * @param baseY
+		 * @param octaves
+		 * @param randomSeed
+		 * @param stitch
+		 * @param fractalNoise
+		 * @param channelOptions
+		 * @param greyScale
+		 * 
+		 */
 		public function PerlinValues(
 			baseX:Number = 50, 
 			baseY:Number = 50, 

@@ -1,5 +1,5 @@
-package com.ghostmonk.organic
-{
+package com.ghostmonk.organic {
+	
 	import flash.display.Bitmap;
 	import flash.display.BitmapData;
 	import flash.display.Sprite;
@@ -9,8 +9,7 @@ package com.ghostmonk.organic
 	 * @author ghostmonk
 	 * 
 	 */
-	public class BasicPerlinData extends Sprite
-	{	
+	public class BasicPerlinData extends Sprite {	
 		
 		
 		
@@ -21,6 +20,11 @@ package com.ghostmonk.organic
 		private var _speed:Number;
 		
 		
+		/**
+		 * 
+		 * @return 
+		 * 
+		 */
 		public function get perlinValues():PerlinValues {
 			
 			return _perlinValues;
@@ -29,10 +33,24 @@ package com.ghostmonk.organic
 		
 		
 		
+		/**
+		 * 
+		 * @return 
+		 * 
+		 */
 		public function get bitmapData():BitmapData {
 			return _bitmapData;
 		}
 		
+		
+		
+		/**
+		 * 
+		 * @param width
+		 * @param height
+		 * @param scale
+		 * 
+		 */
 		public function setBitmapSize( width:Number, height:Number, scale:Number ):void {
 			
 			_bitmapData = new BitmapData( width, height, false, 0xff000000 );
@@ -42,6 +60,15 @@ package com.ghostmonk.organic
 		
 		
 		
+		/**
+		 * 
+		 * @param perlinValues
+		 * @param width
+		 * @param height
+		 * @param scale
+		 * @param speed
+		 * 
+		 */
 		public function BasicPerlinData( perlinValues:PerlinValues, width:Number, height:Number, scale:Number, speed:int ) {		
 			
 			_perlinValues = perlinValues;
@@ -64,6 +91,13 @@ package com.ghostmonk.organic
 		
 		
 		
+		/**
+		 * 
+		 * @param x
+		 * @param y
+		 * @return 
+		 * 
+		 */
 		public function getDataPoint( x:int, y:int ):Number {
 			 
 			var dataRange:Number = _bitmapData.getPixel( x, y ) /  16711422 * 255;
@@ -73,6 +107,11 @@ package com.ghostmonk.organic
 		
 		
 		
+		/**
+		 * 
+		 * @param visible
+		 * 
+		 */
 		public function toggleDisplay( visible:Boolean ):void {
 			
 			if( visible ) {
@@ -89,6 +128,11 @@ package com.ghostmonk.organic
 		
 		
 		
+		/**
+		 * 
+		 * @param value
+		 * 
+		 */
 		public function changeChannel( value:int ):void {
 			
 			_perlinValues.channelOptions = value;
@@ -98,6 +142,11 @@ package com.ghostmonk.organic
 		
 		
 		
+		/**
+		 * 
+		 * @param value
+		 * 
+		 */
 		public function changeSpeed( value:Number ):void {
 			
 			_speed = value;
@@ -107,6 +156,10 @@ package com.ghostmonk.organic
 		
 		
 		
+		/**
+		 * 
+		 * 
+		 */
 		public function renderData():void {
 				
 			_points[0].x -= _speed;

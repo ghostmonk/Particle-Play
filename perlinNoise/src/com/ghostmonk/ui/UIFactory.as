@@ -37,12 +37,12 @@ package com.ghostmonk.ui {
 		 * @return 
 		 * 
 		 */
-		public function createSimpleSlider( holder:Sprite, values:Object, callBack:Function ):SimpleSlider {
+		public function createSimpleSlider( holder:SliderAsset, values:Object, callBack:Function ):SimpleSlider {
 			
 			var slider:SimpleSlider =  new SimpleSlider ( 
 				holder,
-				holder.getChildByName( "hitarea" ),
-				holder.getChildByName( "marker" ),
+				holder.hitarea,
+				holder.marker,
 				values.min,
 				values.max
 			);
@@ -66,9 +66,9 @@ package com.ghostmonk.ui {
 		 * @return 
 		 * 
 		 */
-		public function createSwitch( holder:Sprite, isOn:Boolean, callback:Function ):Switch {
+		public function createSwitch( holder:SwitchAsset, isOn:Boolean, callback:Function ):Switch {
 			
-			var switcher:Switch = new Switch( holder, holder.getChildByName( "marker" ), isOn );
+			var switcher:Switch = new Switch( holder, holder.marker, isOn );
 			
 			switcher.addEventListener( ToggleEvent.TOGGLE, callback );
 			 
@@ -87,12 +87,12 @@ package com.ghostmonk.ui {
 		 * @return 
 		 * 
 		 */
-		public function create2DGridControl( holder:Sprite, xValue:Number, yValue:Number, callback:Function ):TwoDimensionalGridControl {
+		public function create2DGridControl( holder:TwoDControllerAsset, xValue:Number, yValue:Number, callback:Function ):TwoDimensionalGridControl {
 			
 			var gridControl:TwoDimensionalGridControl = 
 				new TwoDimensionalGridControl( 
 					holder, 
-					holder.getChildByName( "marker" ), 
+					holder.marker, 
 					xValue, 
 					yValue 
 				);
@@ -115,14 +115,14 @@ package com.ghostmonk.ui {
 		 * @return 
 		 * 
 		 */
-		public function createStepper( holder:Sprite, values:Object, callback:Function ):SimpleStepper {
+		public function createStepper( holder:StepperAsset, values:Object, callback:Function ):SimpleStepper {
 			
 			var stepper:SimpleStepper 
 				= new SimpleStepper(
 					holder,
-					holder.getChildByName( "stepUp" ) as Sprite,
-					holder.getChildByName( "stepDown" ) as Sprite,
-					holder.getChildByName( "output" ) as TextField,
+					holder.stepUp,
+					holder.stepDown,
+					holder.output,
 					values.max,
 					values.min,
 					values.start,
